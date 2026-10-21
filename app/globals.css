@@ -117,3 +117,9 @@
   color: transparent;
   -webkit-text-stroke: 1px #f9f6f0;
 }
+/* Next.js dev overlay indicator ko hide karne ke liye */
+nextjs-portal,
+div[data-nextjs-toast="true"],
+[data-nextjs-dev-overlay] {
+  display: none !important;
+}

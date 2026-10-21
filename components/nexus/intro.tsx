@@ -38,16 +38,17 @@ export function IntroProvider({ children }: { children: React.ReactNode }) {
             key="splash"
             role="status"
             aria-label="Loading NEXUS"
-            className="fixed inset-0 z-[10000] flex items-center justify-center bg-wine-950"
+            className="fixed inset-0 z-[10000] flex items-center justify-center bg-[#f9f6f0]"
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
           >
+            {/* Subtle warm ambient radial glow */}
             <div
               aria-hidden="true"
-              className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(139,29,52,0.35),transparent_60%)]"
+              className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(139,29,52,0.08),transparent_65%)]"
             />
             <motion.div
-              className="relative flex font-serif text-5xl text-linen sm:text-7xl md:text-8xl"
+              className="relative flex font-serif text-5xl font-medium text-[#8b1d34] sm:text-7xl md:text-8xl"
               initial={{ letterSpacing: '0.05em' }}
               animate={{ letterSpacing: '0.38em' }}
               transition={{ duration: 1.9, ease: [0.22, 1, 0.36, 1] }}

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Concierge } from '@/components/nexus/concierge'
+
 import { Footer } from '@/components/nexus/footer'
 import { Navbar } from '@/components/nexus/navbar'
 import { StoreCatalog } from '@/components/nexus/store-catalog'
@@ -39,7 +39,7 @@ export default function StorePage() {
         </div>
       </main>
       <Footer />
-      <Concierge />
+      
     </>
   )
 }

@@ -10,8 +10,18 @@ const desktopLinks = navLinks.filter((l) => ['Home', 'About', 'Services', 'Work'
 
 export function Navbar() {
   const [open, setOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
   const closeRef = useRef<HTMLButtonElement>(null)
   const toggleRef = useRef<HTMLButtonElement>(null)
+
+  // Scroll listener taaki page scroll hone par navbar hamesha visible rahe
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   useEffect(() => {
     if (!open) return
@@ -31,7 +41,13 @@ export function Navbar() {
   }, [open])
 
   return (
-    <header className="fixed left-0 top-0 z-[9999] h-20 w-full">
+    <header 
+      className={`fixed left-0 top-0 z-[9999] h-20 w-full transition-all duration-300 ${
+        scrolled 
+          ? 'border-b border-[#f9f6f0]/10 bg-[#160408]/90 backdrop-blur-md shadow-[0_4px_24px_rgba(0,0,0,0.35)]' 
+          : 'bg-transparent'
+      }`}
+    >
       <nav
         aria-label="Primary"
         className="mx-auto flex h-full w-full max-w-[1600px] items-center justify-between px-5 sm:px-8 nav:grid nav:grid-cols-[1fr_auto_1fr] nav:px-10"
@@ -127,6 +143,7 @@ export function Navbar() {
                   type="button"
                   onClick={() => setOpen(false)}
                   aria-label="Close menu"
+                  aria-expanded={open}
                   className="flex size-10 items-center justify-center rounded-full border border-linen-200/20 text-linen transition-colors hover:border-[#8b1d34] hover:text-[#c43354]"
                 >
                   <X className="size-5" aria-hidden="true" />

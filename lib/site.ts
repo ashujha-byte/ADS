@@ -2,7 +2,7 @@ export const WHATSAPP_NUMBER = '919572497103'
 export const PHONE_DISPLAY = '+91 95724 97103'
 
 export function whatsappLink(message: string) {
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`
+  return `https://wa.me/${9572497103}?text=${encodeURIComponent(message)}`
 }
 
 export const INQUIRY_LINK = 'https://wa.me/919572497103?text=Hi%20Nexus%2C%20I%20want%20to%20make%20an%20inquiry'
@@ -56,12 +56,12 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: 'Aurelia Maison',
-    category: 'Luxury E-commerce',
+    title: 'Laksh-Empires',
+    category: 'Luxury Real Estate.',
     year: '2026',
-    image: '/work/aurelia.png',
-    tags: ['Next.js', 'Commerce', 'Art Direction'],
-    url: 'https://vercel.com',
+    image: '/laksh-empires.png',
+    tags: ['html', 'java-script', 'Art Direction'],
+    url: 'https://lakshempires.com/',
   },
   {
     title: 'Vantage Pay',
@@ -200,8 +200,8 @@ export const books: Book[] = [
 ]
 
 export const socials = [
-  { label: 'Instagram', href: 'https://instagram.com' },
-  { label: 'LinkedIn', href: 'https://linkedin.com' },
+  { label: 'Instagram', href: 'https://www.instagram.com/nexusstudios.in?rpxt=MXY0Njh4N2RnaDRkbA==' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/ashu-kumar-jha-509589236' },
   { label: 'X / Twitter', href: 'https://x.com' },
-  { label: 'GitHub', href: 'https://github.com' },
+  { label: 'GitHub', href: 'https://github.com/ashujha-byte' },
 ] as const

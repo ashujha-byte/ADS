@@ -15,7 +15,11 @@ const description =
   'Nexus is a high-performance creative studio and software agency. We combine modern web engineering, clean design systems, and rapid automation to scale digital products.'
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : 'http://localhost:3000'),
+  metadataBase: new URL(
+    process.env.VERCEL_PROJECT_PRODUCTION_URL
+      ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+      : 'http://localhost:3000'
+  ),
   title: {
     default: 'NEXUS — Connecting Ideas to Execution',
     template: '%s — NEXUS',
@@ -31,7 +35,6 @@ export const metadata: Metadata = {
     'Next.js agency',
   ],
   applicationName: 'NEXUS',
-  generator: 'v0.app',
   alternates: { canonical: '/' },
   openGraph: {
     type: 'website',
@@ -51,11 +54,11 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   icons: {
     icon: [
-      { url: '/icon-light-32x32.png', media: '(prefers-color-scheme: light)' },
-      { url: '/icon-dark-32x32.png', media: '(prefers-color-scheme: dark)' },
-      { url: '/icon.svg', type: 'image/svg+xml' },
+      { url: '/nexus-brand-logo.svg' },
+      { url: '/nexus-brand-logo.svg', type: 'image/svg+xml' },
     ],
-    apple: '/apple-icon.png',
+    shortcut: '/nexus-brand-logo.svg',
+    apple: '/nexus-brand-logo.svg',
   },
 }
 
@@ -73,7 +76,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`} data-scroll-behavior="smooth">
-      <body className="antialiased">
+      <body className="antialiased bg-[#160408] text-[#f9f6f0]">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

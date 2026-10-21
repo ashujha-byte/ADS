@@ -57,7 +57,7 @@ export function Work() {
       <div className="mx-auto max-w-[1400px]">
         <Reveal>
           <div className="inline-flex items-center gap-3 rounded-full border border-[#8b1d34]/20 bg-[#8b1d34]/[0.05] px-4 py-1.5 text-xs font-semibold tracking-[0.25em] text-[#8b1d34] uppercase">
-            <span>03</span>
+           
             <span className="h-1 w-1 rounded-full bg-[#8b1d34]" />
             <span>Selected Work</span>
           </div>
