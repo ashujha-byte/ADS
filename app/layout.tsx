@@ -60,6 +60,9 @@ export const metadata: Metadata = {
     shortcut: '/nexus-brand-logo.svg',
     apple: '/nexus-brand-logo.svg',
   },
+  verification: {
+    google: 'Zlg6_VWMTg3U7n1A-3fqsuYAx_jKkuKS4obJIP18AYY',
+  },
 }
 
 export const viewport: Viewport = {
