@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.VERCEL_PROJECT_PRODUCTION_URL
       ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-      : 'http://localhost:3000'
+      : 'https://ashudigitalservices.vercel.app/'
   ),
   title: {
     default: '- Connecting Ideas to Execution',
@@ -85,7 +85,7 @@ export const metadata: Metadata = {
     apple: '/ashu.png',
   },
   verification: {
-    google: 'Zlg6_VWMTg3U7n1A-3fqsuYAx_jKkuKS4obJIP18AYY',
+    google: 'nn-Y4btMcmwlfc3rlUDKr3ZwlhilJw21ICh2fMtz5PU',
   },
 }
 
