@@ -21,7 +21,7 @@ export const metadata: Metadata = {
       : 'http://localhost:3000'
   ),
   title: {
-    default: 'ADS —  Connecting Ideas to Execution',
+    default: '- Connecting Ideas to Execution',
     template: '%s — Ashu Digital Studio (ADS)',
   },
   description,
@@ -78,11 +78,11 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/you.png', type: 'image/x-icon' },
-      { url: '/you.png', sizes: '32x32' },
+      { url: '/ashu.png', type: 'image/x-icon' },
+      { url: '/ashu.png', sizes: '32x32' },
     ],
-    shortcut: '/you.png',
-    apple: '/you.png',
+    shortcut: '/ashu.png',
+    apple: '/ashu.png',
   },
   verification: {
     google: 'Zlg6_VWMTg3U7n1A-3fqsuYAx_jKkuKS4obJIP18AYY',

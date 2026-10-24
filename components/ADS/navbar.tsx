@@ -2,6 +2,7 @@
 
 import { AnimatePresence, motion } from 'framer-motion'
 import { ArrowUpRight, Menu, X } from 'lucide-react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 import { DISCUSS_LINK, navLinks } from '@/lib/site'
@@ -75,13 +76,20 @@ export function Navbar() {
           </li>
         </ul>
 
-        {/* Center NEXUS Brand with Red Wine Hover */}
+        {/* Center ADS Brand Logo (Responsive for Desktop & Mobile) */}
         <Link
           href="/"
-          aria-label="NEXUS home"
-          className="font-serif text-xl tracking-[0.42em] text-linen transition-colors duration-300 hover:text-[#c43354] nav:pl-[0.42em] nav:text-2xl"
+          aria-label="ADS home"
+          className="group relative flex items-center justify-center transition-transform duration-300 hover:scale-105"
         >
-        ADS
+          <Image
+            src="/ashu.png"
+            alt="ADS — Ashu Digital Services"
+            width={120}
+            height={60}
+            priority
+            className="h-9 w-auto object-contain transition-opacity duration-300 group-hover:opacity-90 sm:h-10 md:h-11"
+          />
         </Link>
 
         {/* Right Action: Luxury Red Wine Glass CTA Button */}
@@ -137,13 +145,22 @@ export function Navbar() {
               transition={{ type: 'tween', duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
             >
               <div className="flex h-10 items-center justify-between border-b border-linen-200/10 pb-4">
-                <span className="font-serif text-lg tracking-[0.42em] text-linen">NEXUS</span>
+                <Link href="/" onClick={() => setOpen(false)} className="flex items-center">
+                  <Image
+                    src="/ashu.png"
+                    alt="ADS Logo"
+                    width={90}
+                    height={45}
+                    className="h-8 w-auto object-contain"
+                  />
+                </Link>
                 <button
                   ref={closeRef}
                   type="button"
                   onClick={() => setOpen(false)}
                   aria-label="Close menu"
                   aria-expanded={open}
+                  aria-controls="mobile-menu"
                   className="flex size-10 items-center justify-center rounded-full border border-linen-200/20 text-linen transition-colors hover:border-[#8b1d34] hover:text-[#c43354]"
                 >
                   <X className="size-5" aria-hidden="true" />
