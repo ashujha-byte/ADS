@@ -108,10 +108,10 @@ export const projects: Project[] = [
 export const faqs = [
   {
     q: 'How long does a typical project take?',
-    a: 'Landing pages ship in 1–2 weeks, full websites in 3–5 weeks, and custom software or apps in 6–12 weeks depending on scope. You get a clear timeline before we start.',
+    a: 'Landing pages ship in 1–2 Days, full websites in 1–2 weeks, and custom software or apps in 3–4 weeks depending on scope. You get a clear timeline before we start.',
   },
   {
-    q: 'What does a project with Nexus cost?',
+    q: 'What does a project with ADS cost?',
     a: 'Every project is scoped individually. After a short discovery call we send a fixed quote with milestones, so you always know what you are paying for.',
   },
   {

@@ -81,7 +81,7 @@ export function Navbar() {
           aria-label="NEXUS home"
           className="font-serif text-xl tracking-[0.42em] text-linen transition-colors duration-300 hover:text-[#c43354] nav:pl-[0.42em] nav:text-2xl"
         >
-          NEXUS
+        ADS
         </Link>
 
         {/* Right Action: Luxury Red Wine Glass CTA Button */}

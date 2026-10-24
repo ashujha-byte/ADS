@@ -12,7 +12,7 @@ const playfair = Playfair_Display({
 })
 
 const description =
-  'Nexus is a high-performance creative studio and software agency. We combine modern web engineering, clean design systems, and rapid automation to scale digital products.'
+  'Ashu Digital Studio (ADS) is a high-performance creative studio and software agency. We combine modern web engineering, clean design systems, and rapid automation to scale digital products.'
 
 export const metadata: Metadata = {
   metadataBase: new URL(
@@ -21,11 +21,15 @@ export const metadata: Metadata = {
       : 'http://localhost:3000'
   ),
   title: {
-    default: 'NEXUS — Connecting Ideas to Execution',
-    template: '%s — NEXUS',
+    default: 'ADS —  Connecting Ideas to Execution',
+    template: '%s — Ashu Digital Studio (ADS)',
   },
   description,
   keywords: [
+    'Ashu Digital Studio',
+    'ADS',
+    'ADS digital agency',
+    'ADS studio New Delhi',
     'digital agency',
     'web development agency New Delhi',
     'full stack development',
@@ -34,31 +38,51 @@ export const metadata: Metadata = {
     'branding studio',
     'Next.js agency',
   ],
-  applicationName: 'NEXUS',
+  applicationName: 'Ashu Digital Studio',
+  authors: [{ name: 'Ashu Kumar Jha', url: 'https://ashudigitalstudio.in' }],
+  creator: 'Ashu Kumar Jha',
+  publisher: 'Ashu Digital Studio',
   alternates: { canonical: '/' },
   openGraph: {
     type: 'website',
-    siteName: 'NEXUS',
-    title: 'NEXUS — Connecting Ideas to Execution',
+    siteName: 'Ashu Digital Studio (ADS)',
+    title: 'ADS — Connecting Ideas to Execution',
     description,
     url: '/',
     locale: 'en_IN',
-    images: [{ url: '/og.png', width: 1200, height: 630, alt: 'NEXUS — Connecting Ideas to Execution' }],
+    images: [
+      {
+        url: '/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'ADS — Connecting Ideas to Execution',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'NEXUS — Connecting Ideas to Execution',
+    title: 'ADS —Connecting Ideas to Execution',
     description,
-    images: ['/og.png'],
+    images: ['/ads.svg'],
   },
-  robots: { index: true, follow: true },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   icons: {
     icon: [
-      { url: '/nexus-brand-logo.svg' },
-      { url: '/nexus-brand-logo.svg', type: 'image/svg+xml' },
+      { url: '/you.png', type: 'image/x-icon' },
+      { url: '/you.png', sizes: '32x32' },
     ],
-    shortcut: '/nexus-brand-logo.svg',
-    apple: '/nexus-brand-logo.svg',
+    shortcut: '/you.png',
+    apple: '/you.png',
   },
   verification: {
     google: 'Zlg6_VWMTg3U7n1A-3fqsuYAx_jKkuKS4obJIP18AYY',
@@ -72,13 +96,44 @@ export const viewport: Viewport = {
   initialScale: 1,
 }
 
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Ashu Digital Studio',
+  alternateName: ['ADS', 'ADS Studio', 'Ashu Digital Studio (ADS)'],
+  url: 'https://ashudigitalstudio.in',
+  logo: 'https://ashudigitalstudio.in/ads.svg',
+  founder: {
+    '@type': 'Person',
+    name: 'Ashu Kumar Jha',
+  },
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'New Delhi',
+    addressRegion: 'Delhi',
+    addressCountry: 'IN',
+  },
+  description:
+    'High-performance creative studio and software agency specializing in modern web engineering, 3D design systems, and AI automation.',
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable}`} data-scroll-behavior="smooth">
+    <html
+      lang="en"
+      className={`${inter.variable} ${playfair.variable}`}
+      data-scroll-behavior="smooth"
+    >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+      </head>
       <body className="antialiased bg-[#160408] text-[#f9f6f0]">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}

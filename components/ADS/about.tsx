@@ -35,7 +35,7 @@ export function About() {
           <div className="inline-flex items-center gap-3 rounded-full border border-[#8b1d34]/20 bg-[#8b1d34]/[0.05] px-4 py-1.5 text-xs font-semibold tracking-[0.25em] text-[#8b1d34] uppercase">
           
             <span className="h-1 w-1 rounded-full bg-[#8b1d34]" />
-            <span>About Studio</span>
+            <span>About</span>
           </div>
         </Reveal>
 
@@ -65,7 +65,7 @@ export function About() {
 
           <Reveal delay={0.1} className="flex flex-col justify-center gap-6 text-base leading-relaxed text-[#4a3539] md:text-lg">
             <p>
-              Nexus is an end-to-end creative engineering studio. We engineer sub-second web applications, interactive visual brand experiences, and autonomous workflows tailored to scale modern businesses.
+              ADS is an end-to-end creative engineering studio. We engineer sub-second web applications, interactive visual brand experiences, and autonomous workflows tailored to scale modern businesses.
             </p>
             <p className="text-sm leading-relaxed text-[#735a5f] md:text-base">
               We don&apos;t build disposable templates. From custom Next.js architectures and high-converting e-commerce engines to automated backend pipelines, we bridge the gap between aesthetic prestige and commercial performance.

@@ -1,13 +1,13 @@
-import { About } from '@/components/nexus/about'
-import { Concierge } from '@/components/nexus/concierge'
-import { Contact } from '@/components/nexus/contact'
-import { Faq } from '@/components/nexus/faq'
-import { Footer } from '@/components/nexus/footer'
-import { Hero } from '@/components/nexus/hero'
-import { IntroProvider } from '@/components/nexus/intro'
-import { Navbar } from '@/components/nexus/navbar'
-import { Services } from '@/components/nexus/services'
-import { Work } from '@/components/nexus/work'
+import { About } from '@/components/ADS/about'
+import { Concierge } from '@/components/ADS/concierge'
+import { Contact } from '@/components/ADS/contact'
+import { Faq } from '@/components/ADS/faq'
+import { Footer } from '@/components/ADS/footer'
+import { Hero } from '@/components/ADS/hero'
+import { IntroProvider } from '@/components/ADS/intro'
+import { Navbar } from '@/components/ADS/navbar'
+import { Services } from '@/components/ADS/services'
+import { Work } from '@/components/ADS/work'
 
 export default function HomePage() {
   return (

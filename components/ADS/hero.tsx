@@ -42,11 +42,13 @@ export function Hero() {
           variants={item}
           className="flex items-center gap-3 whitespace-nowrap text-[0.65rem] uppercase tracking-[0.25em] text-[#d9cec1] sm:text-xs sm:tracking-[0.3em]"
         >
+            
+          <span>ADS</span>
+           <span aria-hidden="true" className="h-[1.5px] w-6 bg-[#8b1d34]" />
           <span>Digital agency</span>
           <span aria-hidden="true" className="h-[1.5px] w-6 bg-[#8b1d34]" />
           <span>Worldwide</span>
         </motion.p>
-
         {/* Headline with Red Wine outline & Off-White gradient */}
         <motion.h1
           variants={item}
@@ -67,7 +69,7 @@ export function Hero() {
           variants={item}
           className="mt-8 max-w-[680px] text-pretty text-base leading-relaxed text-[#d9cec1] [text-wrap:balance] sm:text-lg"
         >
-          Nexus is a high-performance creative studio and software agency. We combine modern web engineering, clean
+          ADS is a high-performance creative studio and software agency. We combine modern web engineering, clean
           design systems, and rapid automation to scale digital products.
         </motion.p>
 

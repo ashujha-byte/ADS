@@ -10,7 +10,7 @@ export function useIntroReady() {
 }
 
 let introPlayed = false
-const LETTERS = ['N', 'E', 'X', 'U', 'S']
+const LETTERS = ['A', 'D', 'S']
 
 export function IntroProvider({ children }: { children: React.ReactNode }) {
   const [showSplash, setShowSplash] = useState(() => !introPlayed)

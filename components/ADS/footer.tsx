@@ -66,9 +66,9 @@ export function Footer() {
           
           {/* Column 1: Brand Info */}
           <div>
-            <Link href="/" className="inline-flex items-center gap-3 text-[#160408] transition-colors hover:text-[#8b1d34]" aria-label="NEXUS home">
-              <LogoMark className="size-10 text-[#8b1d34]" />
-              <span className="font-serif text-2xl tracking-[0.38em]">NEXUS</span>
+            <Link href="/" className="inline-flex items-center gap-3 text-[#160408] transition-colors hover:text-[#8b1d34]" aria-label="ADS home">
+             
+              <span className="font-serif text-2xl tracking-[0.38em]">ADS</span>
             </Link>
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-[#5e4b4f]">
               Connecting ideas to execution. A high-performance creative studio and software agency from New Delhi, working worldwide.
@@ -131,7 +131,7 @@ export function Footer() {
 
         {/* Bottom Bar: Copyright & Back to Top */}
         <div className="mt-16 flex flex-col-reverse gap-4 border-t border-[#160408]/10 pt-8 text-xs font-medium text-[#735a5f] sm:flex-row sm:items-center sm:justify-between">
-          <p>&copy; {new Date().getFullYear()} NEXUS Studio. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()}Ashu Digital Services. All rights reserved.</p>
           <a 
             href="#home" 
             className="group inline-flex items-center gap-2 text-[#160408] transition-colors hover:text-[#8b1d34]"
