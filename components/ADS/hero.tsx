@@ -23,7 +23,7 @@ export function Hero() {
           muted
           playsInline
           className="size-full object-cover object-center opacity-85"
-          src="https://www.pexels.com/download/video/7660484/" 
+          src="https://www.pexels.com/download/video/8818313/" 
         />
         {/* Sirf light black vignette taaki text readable ho, koi red color nahi */}
         <div className="absolute inset-0 bg-black/45" />

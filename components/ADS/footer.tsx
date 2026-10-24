@@ -4,6 +4,7 @@ import { ArrowUp, ArrowUpRight, Globe } from 'lucide-react'
 import Link from 'next/link'
 import { navLinks, socials } from '@/lib/site'
 import { LogoMark } from './logo-mark'
+import Image from 'next/image'
 
 // Social Media Platform Icon Component (Clean Inline SVG - No Lucide Import Error)
 function SocialIcon({ label }: { label: string }) {
@@ -66,10 +67,20 @@ export function Footer() {
           
           {/* Column 1: Brand Info */}
           <div>
-            <Link href="/" className="inline-flex items-center gap-3 text-[#160408] transition-colors hover:text-[#8b1d34]" aria-label="ADS home">
-             
-              <span className="font-serif text-2xl tracking-[0.38em]">ADS</span>
-            </Link>
+           <Link 
+  href="/" 
+  className="inline-flex items-center gap-3 transition-opacity duration-300 hover:opacity-80" 
+  aria-label="ADS home"
+>
+  <Image
+    src="/ashu1.png"
+    alt="ADS — Ashu Digital Services"
+    width={120}
+    height={48}
+    priority
+    className="h-8 w-auto object-contain sm:h-9"
+  />
+</Link>
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-[#5e4b4f]">
               Connecting ideas to execution. A high-performance creative studio and software agency from New Delhi, working worldwide.
             </p>

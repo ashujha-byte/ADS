@@ -22,12 +22,16 @@ export function Contact() {
           
           {/* CLEAR BACKGROUND IMAGE (NO RED WINE GLOW) */}
           <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0">
-            <img
-              src="https://images.pexels.com/photos/33681749/pexels-photo-33681749.jpeg"
-              alt="Nexus Studio Atmosphere"
-              loading="lazy"
-              className="size-full object-cover object-center opacity-75"
-            />
+          <video
+  autoPlay
+  loop
+  muted
+  playsInline
+  preload="none"
+  src="https://www.pexels.com/download/video/7818412/"
+  title="ADS Studio Atmosphere"
+  className="size-full object-cover object-center opacity-75"
+/>
             {/* Clean neutral tint for clear text readability without color distortion */}
             <div className="absolute inset-0 bg-black/55" />
           </div>

@@ -5,8 +5,8 @@ export function whatsappLink(message: string) {
   return `https://wa.me/${9572497103}?text=${encodeURIComponent(message)}`
 }
 
-export const INQUIRY_LINK = 'https://wa.me/919572497103?text=Hi%20Nexus%2C%20I%20want%20to%20make%20an%20inquiry'
-export const DISCUSS_LINK = whatsappLink("Hi Nexus, let's discuss a project.")
+export const INQUIRY_LINK = 'https://wa.me/919572497103?text=Hi%20ADS%2C%20I%20want%20to%20make%20an%20inquiry'
+export const DISCUSS_LINK = whatsappLink("Hi ADS, let's discuss a project.")
 
 export const navLinks = [
   { label: 'Home', href: '/#home' },
