@@ -12,24 +12,27 @@ const playfair = Playfair_Display({
 })
 
 const description =
-  'Ashu Digital Studio (ADS) is a high-performance creative studio and software agency. We combine modern web engineering, clean design systems, and rapid automation to scale digital products.'
+  'Ashu Digital Services (ADS) is a high-performance creative studio and software agency. We combine modern web engineering, clean design systems, and rapid automation to scale digital products.'
+
+const siteUrl = 'https://ashudigitalservices.vercel.app'
 
 export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.VERCEL_PROJECT_PRODUCTION_URL
       ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-      : 'https://ashudigitalservices.vercel.app/'
+      : siteUrl
   ),
   title: {
-    default: '- Connecting Ideas to Execution',
-    template: '%s — Ashu Digital Studio (ADS)',
+    default: 'ADS | Connecting Ideas to Execution',
+    template: '%s — ADS',
   },
   description,
   keywords: [
-    'Ashu Digital Studio',
     'ADS',
-    'ADS digital agency',
-    'ADS studio New Delhi',
+    'ADS',
+    'ADS',
+    'ADS',
+    'ADS New Delhi',
     'digital agency',
     'web development agency New Delhi',
     'full stack development',
@@ -38,15 +41,15 @@ export const metadata: Metadata = {
     'branding studio',
     'Next.js agency',
   ],
-  applicationName: 'Ashu Digital Studio',
-  authors: [{ name: 'Ashu Kumar Jha', url: 'https://ashudigitalstudio.in' }],
-  creator: 'Ashu Kumar Jha',
-  publisher: 'Ashu Digital Studio',
+  applicationName: 'ADS',
+  authors: [{ name: 'Ashu Jha', url: siteUrl }],
+  creator: 'Ashu Jha',
+  publisher: 'ADS',
   alternates: { canonical: '/' },
   openGraph: {
     type: 'website',
-    siteName: 'Ashu Digital Studio (ADS)',
-    title: 'ADS — Connecting Ideas to Execution',
+    siteName: 'ADS',
+    title: 'ADS | Connecting Ideas to Execution',
     description,
     url: '/',
     locale: 'en_IN',
@@ -61,9 +64,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'ADS —Connecting Ideas to Execution',
+    title: 'ADS| Connecting Ideas to Execution',
     description,
-    images: ['/ads.svg'],
+    images: ['/og.png'],
   },
   robots: {
     index: true,
@@ -78,14 +81,14 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/ashu.png', type: 'image/x-icon' },
-      { url: '/ashu.png', sizes: '32x32' },
+      { url: '/ashu1.png', type: 'image/png' },
+      { url: '/ashu1.png', sizes: '32x32' },
     ],
-    shortcut: '/ashu.png',
-    apple: '/ashu.png',
+    shortcut: '/ashu1.png',
+    apple: '/ashu1.png',
   },
   verification: {
-    google: 'nn-Y4btMcmwlfc3rlUDKr3ZwlhilJw21ICh2fMtz5PU',
+    google: 'nn-Y4btMcmwIfc3rlUDKr3ZwlhilJw21TCh2fMtz5PU',
   },
 }
 
@@ -96,16 +99,25 @@ export const viewport: Viewport = {
   initialScale: 1,
 }
 
+// Google ko batata hai ki is domain ka official site name "Ashu Digital Services" hai (Vercel nahi)
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'ADS',
+  alternateName: ['ADS', 'Ashu Digital Services (ADS)', 'Ashu Digital Studio'],
+  url: siteUrl,
+}
+
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'Ashu Digital Studio',
-  alternateName: ['ADS', 'ADS Studio', 'Ashu Digital Studio (ADS)'],
-  url: 'https://ashudigitalstudio.in',
-  logo: 'https://ashudigitalstudio.in/ads.svg',
+  name: 'ADS',
+  alternateName: ['ADS', 'Ashu Digital Studio'],
+  url: siteUrl,
+  logo: `${siteUrl}/ashu.png`,
   founder: {
     '@type': 'Person',
-    name: 'Ashu Kumar Jha',
+    name: 'Ashu Jha',
   },
   address: {
     '@type': 'PostalAddress',
@@ -129,6 +141,10 @@ export default function RootLayout({
       data-scroll-behavior="smooth"
     >
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
