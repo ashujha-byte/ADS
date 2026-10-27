@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowRight, ArrowUpRight, Sparkles } from 'lucide-react'
+import { ArrowRight, ArrowUpRight } from 'lucide-react'
 import { INQUIRY_LINK } from '@/lib/site'
 import { useIntroReady } from './intro'
 
@@ -15,16 +15,32 @@ export function Hero() {
 
   return (
     <section id="home" className="relative flex min-h-svh items-center justify-center overflow-hidden px-5 pb-16 pt-28">
-      {/* 1. CRYSTAL CLEAR BACKGROUND VIDEO (NO RED GLOW) */}
+      {/* 1. DUAL BACKGROUND VIDEO (MOBILE VS DESKTOP) */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
+        {/* Mobile Video (Screen < 768px: Phones) */}
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="size-full object-cover object-center opacity-85"
-          src="https://www.pexels.com/download/video/8818313/" 
+          preload="metadata"
+          className="size-full object-cover object-center opacity-85 md:hidden"
+          src="https://www.pexels.com/download/video/7849232/"
+          title="ADS Mobile Atmosphere"
         />
+
+        {/* Desktop Video (Screen >= 768px: Tablets, Laptops & Desktops) */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+          className="hidden size-full object-cover object-center opacity-85 md:block"
+          src="https://www.pexels.com/download/video/33222598/"
+          title="ADS Desktop Atmosphere"
+        />
+
         {/* Sirf light black vignette taaki text readable ho, koi red color nahi */}
         <div className="absolute inset-0 bg-black/45" />
         <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/80 to-transparent" />
@@ -42,13 +58,13 @@ export function Hero() {
           variants={item}
           className="flex items-center gap-3 whitespace-nowrap text-[0.65rem] uppercase tracking-[0.25em] text-[#d9cec1] sm:text-xs sm:tracking-[0.3em]"
         >
-            
           <span>ADS</span>
-           <span aria-hidden="true" className="h-[1.5px] w-6 bg-[#8b1d34]" />
+          <span aria-hidden="true" className="h-[1.5px] w-6 bg-[#8b1d34]" />
           <span>Digital agency</span>
           <span aria-hidden="true" className="h-[1.5px] w-6 bg-[#8b1d34]" />
           <span>Worldwide</span>
         </motion.p>
+
         {/* Headline with Red Wine outline & Off-White gradient */}
         <motion.h1
           variants={item}
@@ -61,7 +77,6 @@ export function Hero() {
           <span className="bg-gradient-to-r from-[#f9f6f0] via-[#eedcd0] to-[#f9f6f0] bg-clip-text text-transparent">
             to Execution.
           </span>
-       
         </motion.h1>
 
         {/* Off-White Clean Paragraph */}
