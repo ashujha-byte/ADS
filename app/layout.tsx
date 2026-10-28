@@ -14,7 +14,7 @@ const playfair = Playfair_Display({
 const description =
   'Ashu Digital Services (ADS) is a high-performance creative studio and software agency. We combine modern web engineering, clean design systems, and rapid automation to scale digital products.'
 
-const siteUrl = 'https://ashudigitalservices.vercel.app'
+const siteUrl = 'https://ads-official.vercel.app'
 
 export const metadata: Metadata = {
   metadataBase: new URL(
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
       : siteUrl
   ),
   title: {
-    default: 'ADS | Connecting Ideas to Execution',
+    default: '  Connecting Ideas to Execution.',
     template: '%s — ADS',
   },
   description,
@@ -88,7 +88,7 @@ export const metadata: Metadata = {
     apple: '/ashu1.png',
   },
   verification: {
-    google: 'nn-Y4btMcmwIfc3rlUDKr3ZwlhilJw21TCh2fMtz5PU',
+    google: 'nn-Y4btMcmwlfc3rlUDKr3ZwlhilJw21ICh2fMtz5PU',
   },
 }
 

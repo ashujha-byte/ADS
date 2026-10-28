@@ -1,5 +1,5 @@
 export const WHATSAPP_NUMBER = '919572497103'
-export const PHONE_DISPLAY = '+91 95724 97103'
+export const PHONE_DISPLAY = '+91 9572497103'
 
 export function whatsappLink(message: string) {
   return `https://wa.me/${9572497103}?text=${encodeURIComponent(message)}`
@@ -200,8 +200,8 @@ export const books: Book[] = [
 ]
 
 export const socials = [
-  { label: 'Instagram', href: 'https://www.instagram.com/nexusstudios.in?rpxt=MXY0Njh4N2RnaDRkbA==' },
-  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/ashu-kumar-jha-509589236' },
+  { label: 'Instagram', href: 'https://www.instagram.com/official.ads.1?cplk=MXY0Njh4N2RnaDRkbA==' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/saurav-jha-35737544747' },
   { label: 'X / Twitter', href: 'https://x.com' },
   { label: 'GitHub', href: 'https://github.com/ashujha-byte' },
 ] as const
